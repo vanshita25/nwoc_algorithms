@@ -3,52 +3,52 @@ void QuickSort(int [],int,int);
 int Partition(int [],int,int);
 void main()
 {
-    int a[10]={4,3,6,8,1,10,15,20,34,12};
+    int ar[10]={4,3,6,8,1,10,15,20,34,12};
     int low=0;int i;
     int high=9;
-    QuickSort(a,0,9);
+    QuickSort(ar,0,9);
     printf("\nSorted array is :");
 	for(i=0;i<9;i++)
-		printf("%d ",a[i]);
+		printf("%d ",ar[i]);
 
 }
-void QuickSort(int a[],int low,int high)
+void QuickSort(int ar[],int low,int high)
 {
     int k;
     if(low<high)
     {
-        k=Partition(a,low,high);
-        QuickSort(a,low,k-1);
-        QuickSort(a,k+1,high);
+        k=Partition(ar,low,high);
+        QuickSort(ar,low,k-1);
+        QuickSort(ar,k+1,high);
 
     }
 }
-int Partition(int a[],int low,int high)
+int Partition(int ar[],int low,int high)
 {
     int i=low;
     int j=high;
-    int pivot=a[low];int t,t1;
+    int pivot=ar[low];int t0,t1;
     do
     {
         do
         {
            i++;
-        }while(a[i]<pivot);
+        }while(ar[i]<pivot);
         do
         {
             j--;
 
-        }while(a[j]>pivot);
+        }while(ar[j]>pivot);
         if(i<j)
         {
-           t=a[i];
-           a[i]=a[j];
-           a[j]=t;
+           t0=ar[i];
+           ar[i]=ar[j];
+           ar[j]=t0;
         }
     }while(i<j);
 
-    t1=a[low];
-    a[low]=a[j];
-    a[j]=t1;
+    t1=ar[low];
+    ar[low]=ar[j];
+    ar[j]=t1;
     return j;
 }
