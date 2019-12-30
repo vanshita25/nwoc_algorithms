@@ -14,12 +14,12 @@ void main()
 }
 void QuickSort(int ar[],int low,int high)
 {
-    int k;
+    int -kelement;
     if(low<high)
     {
-        k=Partition(ar,low,high);
-        QuickSort(ar,low,k-1);
-        QuickSort(ar,k+1,high);
+        kelement=Partition(ar,low,high);
+        QuickSort(ar,low,kelement-1);
+        QuickSort(ar,kelement+1,high);
 
     }
 }
