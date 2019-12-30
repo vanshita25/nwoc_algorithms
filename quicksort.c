@@ -14,7 +14,7 @@ void main()
 }
 void QuickSort(int ar[],int low,int high)
 {
-    int -kelement;
+    int kelement;
     if(low<high)
     {
         kelement=Partition(ar,low,high);
