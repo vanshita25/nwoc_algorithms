@@ -1,7 +1,7 @@
 #include<stdio.h>
 #define size 10
-#define TRUE 1
-#define FALSE 0
+#define TRUE 1// gobal declaration of variables
+#define FALSE 0// gobal declaration of variables
 struct stack
 {
     int top;
@@ -14,8 +14,8 @@ int Intialize(void)
 }
  int StackTop()
  {
-     int x;
-     x=s.Item[S.top];
+     int x;// it stores the top element of the stack
+     x=s.Item[s.top];
      return x;
 
 
@@ -27,7 +27,7 @@ int Empty()
     else
         return FALSE;
 }
-void Push(int x)
+void Push(int x)// push is void because it does not return any value
 {
     if(s.top==size-1)
         printf("Stack Overerflow");
@@ -35,21 +35,21 @@ void Push(int x)
         s.top=s.top+1;
         s.Item[s.top]=x;
 }
-int Pop()
+int Pop()// pop has integer return type because t is returning an integer(x) to the main
 {
-    int x;
+    int r;// it stores the deleted element from the array
     if(Empty(s))
         printf("Stack Underflow");
     else
-        x=s.Item[s.top];
+        r=s.Item[s.top];
         s.top--;
-        return x;
+        return r;
 }
  void ParanthesisCheck(char str[10])
  {
       int valid=TRUE;
      Intialize();
-     int i=0;
+     int i=0;// it stands as an index variable 
      while(str[i]!='\0')
      {
          if(str[i]=='(')
